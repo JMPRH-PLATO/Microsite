@@ -1,0 +1,143 @@
+:root {
+  --bg:        #02142c;  /* azul-noite do fundo */
+  --bg-deep:   #011128;  /* mais escuro (rodapé, barra lateral) */
+  --blue:      #1f6bff;  /* azul elétrico */
+  --cyan:      #3fd0f5;  /* ciano */
+  --lime:      #c8f04a;  /* verde-lima */
+  --text:      #e6f0fb;
+  --text-soft: #8ea6c4;
+  --line:      rgba(63, 208, 245, 0.14);
+
+  --font-display: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+  --font-body:    'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+
+  /* imagem de fundo da pagina inicial*/
+  --hero-image: url('/img/hero.jpg');
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary:          #3fd0f5;
+  --ifm-color-primary-dark:     #22c7f0;
+  --ifm-color-primary-darker:   #13bfea;
+  --ifm-color-primary-darkest:  #0e9dc1;
+  --ifm-color-primary-light:    #5cd8f7;
+  --ifm-color-primary-lighter:  #6bdcf7;
+  --ifm-color-primary-lightest: #97e7fa;
+
+  --ifm-background-color:         var(--bg);
+  --ifm-background-surface-color: var(--bg-deep);
+  --ifm-font-color-base:          var(--text);
+  --ifm-color-emphasis-600:       var(--text-soft);
+  --ifm-toc-border-color:         var(--line);
+  --ifm-hr-border-color:          var(--line);
+  --ifm-navbar-background-color:  var(--bg);
+  --ifm-footer-background-color:  var(--bg-deep);
+  --ifm-footer-color:             var(--text-soft);
+  --ifm-menu-color-background-active: rgba(63, 208, 245, 0.08);
+  --docusaurus-highlighted-code-line-bg: rgba(63, 208, 245, 0.12);
+}
+
+:root {
+  --ifm-font-family-base: var(--font-body);
+  --ifm-heading-font-family: var(--font-display);
+  --ifm-navbar-height: 4.5rem;
+  --ifm-navbar-shadow: none;
+}
+
+/* ---------- Menu ---------- */
+.navbar {
+  border-bottom: 1px solid var(--line);
+  padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+}
+.navbar__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.navbar__logo { height: 1.9rem; }
+.navbar-version {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+  margin-left: -0.5rem;
+}
+.navbar__item.navbar__link {
+  color: var(--text-soft);
+  font-weight: 400;
+  font-size: 0.95rem;
+  position: relative;
+}
+.navbar__item.navbar__link:hover,
+.navbar__link--active { color: var(--text) !important; }
+
+
+.navbar__link--active::after {
+  content: '';
+  position: absolute;
+  left: var(--ifm-navbar-item-padding-horizontal);
+  right: var(--ifm-navbar-item-padding-horizontal);
+  bottom: 0.15rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--cyan), var(--lime));
+}
+
+/* ---------- Links externos (GitHub, Jira) ----------*/
+.ext-link {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-display);
+  font-weight: 500 !important;
+  color: var(--text) !important;
+}
+.ext-link:hover { color: var(--cyan) !important; }
+.ext-link svg { display: none; }   
+.ext-link::before {
+  content: '';
+  width: 17px;
+  height: 17px;
+  background: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+          mask: var(--icon) center / contain no-repeat;
+}
+.ext-link--first {
+  margin-left: 0.75rem;
+  padding-left: 1.5rem !important;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+}
+.ext-link--github {
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='6' cy='5' r='2.2' fill='black'/%3E%3Ccircle cx='6' cy='19' r='2.2' fill='black'/%3E%3Ccircle cx='18' cy='8' r='2.2' fill='black'/%3E%3Cpath d='M6 7.2v9.6M18 10.2c0 4-6 3.2-11 6.5'/%3E%3C/svg%3E");
+}
+.ext-link--jira {
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5 21.5 12 12 21.5 2.5 12Z'/%3E%3C/svg%3E");
+}
+@media (min-width: 997px) {
+  .navbar__item.ext-link { display: inline-flex; }
+}
+
+.navbar-sidebar .ext-link--first { margin-left: 0; padding-left: var(--ifm-menu-link-padding-horizontal) !important; border-left: 0; }
+
+/* ---------- Rodape ---------- */
+.footer, .footer--dark {
+  --ifm-footer-background-color: var(--bg-deep);
+  --ifm-footer-color: var(--text-soft);
+  background-color: var(--bg-deep);
+  border-top: 1px solid var(--line);
+  padding: 1.25rem clamp(1.25rem, 5vw, 4.5rem);
+}
+.footer__copyright { text-align: left; font-size: 0.85rem; }
+.footer .container { max-width: none; margin: 0; padding: 0; }
+
+@media (max-width: 996px) {
+  .navbar__item.ext-link { display: none; }
+}
+.navbar-sidebar .navbar-version { display: none; }
+
+[data-theme='dark'] .card {
+  --ifm-card-background-color: var(--bg-deep);
+  border: 1px solid var(--line) !important;
+  transition: border-color 0.2s;
+}
+[data-theme='dark'] .card:hover { border-color: var(--cyan) !important; }
+.card p { color: var(--text-soft); }

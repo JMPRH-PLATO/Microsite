@@ -1,0 +1,53 @@
+.page {
+    --text-edge: calc(clamp(1.25rem, 5vw, 4.5rem) + 36rem);
+  display: flex;
+  background:
+    linear-gradient(to right,
+      var(--bg) 0,
+      rgba(2, 20, 44, 0.92) calc(var(--text-edge) - 6rem),
+      rgba(2, 20, 44, 0) calc(var(--text-edge) + 10rem)),
+    var(--hero-image) right center / auto 100% no-repeat,
+    var(--bg);
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 3rem clamp(1.25rem, 5vw, 4.5rem) 4rem;
+  min-height: calc(100vh - var(--ifm-navbar-height) - 4rem);
+}
+.text { max-width: 36rem; }
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(4rem, 13vw, 9.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  background: linear-gradient(100deg, var(--blue) 0%, var(--cyan) 55%, var(--lime) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.tagline {
+  margin: 1rem 0 2.25rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  line-height: 1.3;
+  color: var(--text);
+}
+.description p { margin: 0 0 1rem; max-width: 34rem; font-size: 1.0625rem; }
+.muted { color: var(--text-soft); font-size: 0.95rem !important; }
+
+@media (max-width: 996px) {
+  .page {
+    background:
+      linear-gradient(to top, var(--bg) 40%, rgba(2, 20, 44, 0.6) 75%, rgba(2, 20, 44, 0.85)),
+      var(--hero-image) 85% center / cover no-repeat,
+      var(--bg);
+  }
+  .hero { align-items: flex-end; }
+}
