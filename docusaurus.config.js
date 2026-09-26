@@ -22,10 +22,11 @@ const config = {
   future: {v4: true},
 
   // Para quando publicar (GitHub Pages)
-  url: 'https://example.com',
-  baseUrl: '/',
-  organizationName: 'your-org',
-  projectName: 'plato-site',
+  url: 'https://jmprh-plato.github.io',
+  baseUrl: '/Microsite/',
+  organizationName: 'JMPRH-PLATO',
+  projectName: 'plato-microsite',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 

@@ -1,0 +1,42 @@
+# Nome que aparece no separador "Actions" do GitHub
+name: Deploy to GitHub Pages
+
+# QUANDO corre: sempre que fazes push para a branch main
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # ---------- 1ª tarefa: compilar o site ----------
+  build:
+    runs-on: ubuntu-latest            # o GitHub empresta uma máquina Linux
+    steps:
+      - uses: actions/checkout@v4     # descarrega o teu código do repositório
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4   # instala o Node (o mesmo que usas para npm start)
+        with:
+          node-version: 20
+          cache: npm                  # guarda os pacotes para a próxima vez ser mais rápida
+
+      - run: npm ci                   # = npm install, mas usa exatamente as versões do package-lock.json
+      - run: npm run build            # gera o site final na pasta build/
+
+      - uses: actions/upload-pages-artifact@v3   # empacota a pasta build/ para o Pages
+        with:
+          path: build
+
+  # ---------- 2ª tarefa: publicar ----------
+  deploy:
+    needs: build                      # só corre se a compilação correu bem
+    permissions:
+      pages: write                    # autoriza publicar no GitHub Pages
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}   # mostra o link do site no fim
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4 # põe o site online

@@ -12,7 +12,7 @@
   --font-body:    'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
 
   /* imagem de fundo da pagina inicial*/
-  --hero-image: url('/img/hero.jpg');
+  --hero-image: url('../../static/img/hero.jpg');
 }
 
 [data-theme='dark'] {
