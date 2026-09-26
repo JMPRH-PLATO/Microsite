@@ -39,7 +39,10 @@ title: Calendar
 ## 2º Semester
 | Month | Tasks |
 |---|---|
-| January | Review and improve the application's code<br />Making the poster
-| February-March | Security logic: Hard Brake and Platoon Split<br />Making the promotional video
-| April-June | Integration, pratical tests and documentation<br />Preparing for the final presentation
+| January | MVP review and improvement<br />Implementation of hard break mechanism when the leader breaks<br />Making the poster
+| February | Implementation of hard break mechanism when the leader breaks<br />Implementation of division protocol with transition to teleoperation
+| March | Implementation of division protocol with transition to teleoperation<br />Integration testing with the real robots <br />Control and network parameter optimization
+| April | Integration testing with the real robots<br />Control and network parameter optimization<br />Create the promotional video
+| May | Final report<br />Final project presentation Students@DETI
+
     

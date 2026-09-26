@@ -3,5 +3,8 @@ title: Team
 ---
 
 # Team
-
-Coming soon.
+* ## João Neves
+* ## Matilde Sarabando
+* ## Ricardo Rebelo
+* ## Pedro Rocha
+* ## Henrique Reveles
