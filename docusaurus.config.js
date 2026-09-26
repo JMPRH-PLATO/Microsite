@@ -17,7 +17,7 @@ const FOOTER       = 'Universidade de Aveiro · 2026/2027'; //  texto do rodape
 const config = {
   title: PROJECT_NAME,
   tagline: TAGLINE,
-  favicon: 'img/logo.svg',
+  favicon: 'img/Logo.png',
 
   future: {v4: true},
 
@@ -70,8 +70,8 @@ const config = {
       colorMode: {defaultMode: 'dark', disableSwitch: true, respectPrefersColorScheme: false},
 
       navbar: {
-        title: PROJECT_NAME,
-        logo: {alt: '', src: 'img/logo.svg'},
+        //title: PROJECT_NAME,
+        logo: {alt: '', src: 'img/Logo.png'},
         items: [
 
           //ABBAS

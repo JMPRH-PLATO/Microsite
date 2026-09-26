@@ -40,25 +40,28 @@
 :root {
   --ifm-font-family-base: var(--font-body);
   --ifm-heading-font-family: var(--font-display);
-  --ifm-navbar-height: 4.5rem;
+  --ifm-navbar-height: 5rem;
   --ifm-navbar-shadow: none;
 }
 
 /* ---------- Menu ---------- */
 .navbar {
   border-bottom: 1px solid var(--line);
-  padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+  padding-inline: 1rem;
 }
 .navbar__title {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.04em;
 }
-.navbar__logo { height: 1.9rem; }
+.navbar__logo { 
+  height: 4rem; 
+  
+}
 .navbar-version {
   font-size: 0.75rem;
   color: var(--text-soft);
-  margin-left: -0.5rem;
+  margin-left: 0;
 }
 .navbar__item.navbar__link {
   color: var(--text-soft);
