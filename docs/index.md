@@ -3,8 +3,7 @@ sidebar_position: 1
 title: Notes
 slug: /
 ---
-
-{/* ✏️ Esta é a página de entrada da aba Notes. */}
+{/*Página inicial da aba Notes*/}
 
 Working notes for the team. Each note is a Markdown file in the `docs/` folder.
 

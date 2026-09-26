@@ -35,3 +35,11 @@ title: Calendar
 | Week 12: 1/12/2026 | Programming of the lateral and longitudinal tracking algorithms in follower robots using V2V and LiDAR fusion<br />Finish MVP
 | Week 13: 8/12/2026 | Scalability evaluation<br />Security analysis<br />Performance check<br />Machine Learning model validation<br />Prepare for presentation M4
 | Week 14: 15/12/2026 | Get feedback from presentation to fix and improve whatever is needed<br />MVP testing and evaluation
+
+## 2º Semester
+| Month | Tasks |
+|---|---|
+| January | Review and improve the application's code<br />Making the poster
+| February-March | Security logic: Hard Brake and Platoon Split<br />Making the promotional video
+| April-June | Integration, pratical tests and documentation<br />Preparing for the final presentation
+    
