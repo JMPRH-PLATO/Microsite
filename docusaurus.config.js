@@ -10,7 +10,7 @@ const PROJECT_NAME = 'PLATO';                              //  nome do projeto (
 const TAGLINE      = 'Autonomous platooning system';       //  subtitulo na pagina inicial
 const VERSION      = 'v0.4.0';                             //  versao ao lado do nome ('' para esconder)
 const GITHUB_URL   = 'https://github.com/JMPRH-PLATO';//  link da organizacao no GitHub
-const JIRA_URL     = 'https://www.atlassian.com/software/jira';// link do quadro no Jira
+const JIRA_URL     = 'https://autonomous-control.atlassian.net/jira/';// link do quadro no Jira
 const FOOTER       = 'Universidade de Aveiro · 2026/2027'; //  texto do rodape
 
 /** @type {import('@docusaurus/types').Config} */
