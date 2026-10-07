@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
-title: Notes
+title: Meetings
 slug: /
 ---
 {/*Página inicial da aba Notes*/}
 
-Working notes for the team. Each note is a Markdown file in the `docs/` folder.
+Working notes for the team.This will be use to record the every meeting we made and every decision we make. {/*Each note is a Markdown file in the `docs/` folder.*/}
 
-To add a note, create a new `.md` file in `docs/` (for example `docs/2026-09-25-kickoff.md`).
-It shows up in the sidebar automatically. To group notes, put them in a subfolder.
+{/*To add a note, create a new `.md` file in `docs/` (for example `docs/2026-09-25-kickoff.md`).
+It shows up in the sidebar automatically. To group notes, put them in a subfolder.*/}
